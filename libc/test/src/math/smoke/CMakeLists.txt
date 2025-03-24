@@ -3999,7 +3999,8 @@ add_fp_unittest(
     acospif16_test.cpp
   DEPENDS
     libc.src.errno.errno
-    libc.src.math.acosf16  
+    libc.src.math.acospif16  
+    libc.src.math.acosf16 
 )
 
 add_fp_unittest(

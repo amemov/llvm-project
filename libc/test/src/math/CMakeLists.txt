@@ -2229,6 +2229,7 @@ add_fp_unittest(
   SRCS
     acospif16_test.cpp
   DEPENDS
+    libc.src.math.acospif16
     libc.src.math.acosf16  
 )
 
