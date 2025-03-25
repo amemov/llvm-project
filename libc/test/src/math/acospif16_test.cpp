@@ -27,7 +27,7 @@ TEST_F(LlvmLibcAcospif16Test, PositiveRange) {
   for (uint16_t v = POS_START; v <= POS_STOP; ++v) {
     float16 x = FPBits(v).get_val();
 
-    EXPECT_MPFR_MATCH_ALL_ROUNDING(mpfr::Operation::Acos, x,
+    EXPECT_MPFR_MATCH_ALL_ROUNDING(mpfr::Operation::Acospi, x,
                                    LIBC_NAMESPACE::acospif16(x), 0.5);
   }
 }
@@ -36,7 +36,7 @@ TEST_F(LlvmLibcAcospif16Test, NegativeRange) {
   for (uint16_t v = NEG_START; v <= NEG_STOP; ++v) {
     float16 x = FPBits(v).get_val();
 
-    EXPECT_MPFR_MATCH_ALL_ROUNDING(mpfr::Operation::Acos, x,
+    EXPECT_MPFR_MATCH_ALL_ROUNDING(mpfr::Operation::Acospi, x,
                                    LIBC_NAMESPACE::acospif16(x), 0.5);
   }
 }

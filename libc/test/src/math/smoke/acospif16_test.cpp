@@ -14,26 +14,26 @@
 
 using LlvmLibcAcospif16Test = LIBC_NAMESPACE::testing::FPTest<float16>;
 TEST_F(LlvmLibcAcospif16Test, SpecialNumbers) {
-    LIBC_NAMESPACE::libc_errno = 0;
-    EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(aNaN));
-    EXPECT_MATH_ERRNO(0);
-  
-    EXPECT_FP_EQ_WITH_EXCEPTION(aNaN, LIBC_NAMESPACE::acospif16(sNaN), FE_INVALID);
-    EXPECT_MATH_ERRNO(0);
-  
-    EXPECT_FP_EQ(zero, LIBC_NAMESPACE::acospif16(1.0f));
-    EXPECT_MATH_ERRNO(0);
-  
-    EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(inf));
-    EXPECT_MATH_ERRNO(EDOM);
-  
-    EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(neg_inf));
-    EXPECT_MATH_ERRNO(EDOM);
-  
-    EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(2.0f));
-    EXPECT_MATH_ERRNO(EDOM);
-  
-    EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(-2.0f));
-    EXPECT_MATH_ERRNO(EDOM);
-  }
-  
+  LIBC_NAMESPACE::libc_errno = 0;
+  EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(aNaN));
+  EXPECT_MATH_ERRNO(0);
+
+  EXPECT_FP_EQ_WITH_EXCEPTION(aNaN, LIBC_NAMESPACE::acospif16(sNaN),
+                              FE_INVALID);
+  EXPECT_MATH_ERRNO(0);
+
+  EXPECT_FP_EQ(zero, LIBC_NAMESPACE::acospif16(1.0f));
+  EXPECT_MATH_ERRNO(0);
+
+  EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(inf));
+  EXPECT_MATH_ERRNO(EDOM);
+
+  EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(neg_inf));
+  EXPECT_MATH_ERRNO(EDOM);
+
+  EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(2.0f));
+  EXPECT_MATH_ERRNO(EDOM);
+
+  EXPECT_FP_EQ(aNaN, LIBC_NAMESPACE::acospif16(-2.0f));
+  EXPECT_MATH_ERRNO(EDOM);
+}
